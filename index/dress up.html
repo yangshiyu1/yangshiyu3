@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dress up</title>
+    <style>
+        html,div{
+            font-size: 40px;
+        }
+        #di{
+            width: 42px;
+            height: 87px;
+            background-image: url("../媒体/人体.png");
+        }
+        #wo{
+            border: 1px solid black;
+            text-align: center;
+        }
+        #ma{
+            border: 1px solid black;
+            text-align: center;
+        }
+        #zi{
+            border: 1px solid black;
+            text-align: center;
+        }
+div{
+    position: relative;
+
+
+}
+    </style>
+</head>
+<body>
+<script>
+    function g() {
+  document.getElementById("wi").style.backgroundImage="url(../媒体/绿裙.png)";
+  wi.style.top=14+"px";
+  wi.style.left=-1.8+"px";
+  wi.style.width=52+"px";
+  wi.style.height=57+"px";
+    }
+    function red() {
+        document.getElementById("wi").style.backgroundImage="url(../媒体/红裙.png)";
+        wi.style.width=40+"px";
+        wi.style.height=36+"px";
+        wi.style.top=16+"px";
+        wi.style.left=2+"px";
+    }
+    function z() {
+        document.getElementById("wi").style.backgroundImage="url(../媒体/紫裙2.png)";
+        wi.style.width=36+"px";
+        wi.style.height=35+"px";
+        wi.style.top=17+"px";
+        wi.style.left=3+"px";
+    }
+</script>
+<div id="wo" onclick="g()">绿裙</div>
+<div id="ma" onclick="red()">红裙</div>
+<div id="zi" onclick="z()">紫裙</div>
+<div id="di">
+    <div id="wi" ></div>
+</div>
+
+</body>
+</html>

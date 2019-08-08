@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐</title>
+    <style>
+        #ni{
+            height: 100px;
+            width: 100px;
+            background-image: url("../媒体/7.gif");
+        }
+    </style>
+</head>
+<body>
+<audio id="mi"src="../媒体/8.mp3" loop="loop" autoplay="autoplay" preload="auto"></audio>
+<script>
+    var is=true;
+    function j() {
+        if (document.getElementById("mi").paused){
+            document.getElementById("mi").play();
+            document.getElementById("ni").style.backgroundImage = "url(../媒体/7.gif)"
+    }
+    else
+        {
+            document.getElementById("mi").pause();
+            document.getElementById("ni").style.backgroundImage = "url(../媒体/6.gif)"
+        }
+    }
+</script>
+<div id="ni" onclick="j()" ></div>
+
+</body>
+</html>

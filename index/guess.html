@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>guess</title>
+    <style>
+body{
+    font-size: 15px;
+}
+        #wai{
+            width: 600px;
+            height: 300px;
+            border: 10px solid black;
+margin: 0 auto;
+        }
+#zuo {
+     width: 300px;
+     height: 300px;
+    float: left;
+    text-align: center;
+    background-color: lightblue;
+
+
+}
+  #you {
+    width: 300px;
+    height: 300px;
+    float: left;
+    text-align: center;
+    background-color: lightgreen;
+
+}
+  #di{
+      text-align: center;
+      font-size: 70px;
+  }
+  #b{
+position: relative;
+      left: 75px;
+
+  }
+        #m{
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+<body>
+<script>
+    window.jifen=1;
+    function judge() {
+        window.canshu =Math.random();
+        canshu =canshu*3;
+    if (canshu <1){
+        document.getElementById("computer").innerHTML="<img src=\"../媒体/石头.gif\">";
+
+    }
+    else  if (canshu<2 ){
+        document.getElementById("computer").innerHTML="<img src=\"../媒体/剪刀.gif\">";
+
+    }else {
+        document.getElementById("computer").innerHTML="<img src=\"../媒体/布.gif\">";
+
+    }
+    }
+function st() {
+
+    document.getElementById("n").innerHTML="<img src=\"../媒体/石头.gif\">";
+    n.style.transform="scaleX(-1)";
+    judge();
+    canshu =canshu+0;
+    if (canshu <1){
+        document.getElementById("di").innerText="draw　积分："+jifen;
+    }
+    else  if (canshu<2 ){
+        jifen ++;
+        document.getElementById("di").innerText="you win　积分："+jifen;
+    }else {
+        jifen--;
+        document.getElementById("di").innerText="you lost　积分："+jifen;
+    }
+}
+function jd() {
+    document.getElementById("n").innerHTML="<img src=\"../媒体/剪刀.gif\">";
+    n.style.transform="scaleX(-1)";
+    judge();
+    if (canshu <1){
+        jifen--;
+        document.getElementById("di").innerText="you lost　积分："+jifen;
+    }
+    else  if (canshu<2 ){
+        document.getElementById("di").innerText="draw　积分："+jifen;
+
+    }else {
+        jifen ++;
+        document.getElementById("di").innerText="you win　积分："+jifen;
+    }
+}
+function bu() {
+    document.getElementById("n").innerHTML="<img src=\"../媒体/布.gif\">";
+    n.style.transform="scaleX(-1)";
+    judge();
+    if (canshu <1){
+        jifen ++;
+        document.getElementById("di").innerText="you win　积分："+jifen;
+    }
+    else  if (canshu<2 ){
+        jifen--;
+        document.getElementById("di").innerText="you lost　积分："+jifen;
+    }else {
+        document.getElementById("di").innerText="draw　积分："+jifen;
+    }
+
+    }
+</script>
+<div id="wai">
+    <div id="zuo">
+        <h1 id="b" >我的出招　 <img src="../媒体/pk.png"> </h1>
+        <input type="button" value="石头" onclick="st()" />
+        <input type="button" value="剪刀" onclick="jd()" />
+        <input type="button" value="布" onclick="bu()" />
+        <div id="n">
+            <img id="m" src="../媒体/底图.gif">
+        </div>
+    </div>
+    <div id="you">
+        <h1 >电脑的出招  </h1>
+        <div id="computer">
+        <img src="../媒体/底图.gif">
+        </div>
+    </div>
+</div>
+<div id="di">积分：
+</div>
+</body>
+</html>

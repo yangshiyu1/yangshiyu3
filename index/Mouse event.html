@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse event</title>
+<style>
+   html,body{
+        height: 100%;
+       text-align: center;
+   font-size: 200px;
+    }
+</style>
+</head>
+<body onclick=f() >
+<script>
+    var n=1;
+    function f() {
+        if (n%7==0){
+            document.body.innerHTML ="过";
+        }
+        else{
+            document.body.innerHTML =n;
+        }
+n=n+1;
+    }
+</script>
+</body>
+</html>
