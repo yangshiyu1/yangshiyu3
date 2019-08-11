@@ -47,6 +47,8 @@ position: relative;
 <body>
 <script>
     window.jifen=1;
+    var jifen = localStorage.getItem("mane");
+
     function judge() {
         window.canshu =Math.random();
         canshu =canshu*3;
@@ -73,9 +75,11 @@ function st() {
     }
     else  if (canshu<2 ){
         jifen ++;
+        localStorage.setItem("mane",jifen);
         document.getElementById("di").innerText="you win　积分："+jifen;
     }else {
         jifen--;
+        localStorage.setItem("mane",jifen);
         document.getElementById("di").innerText="you lost　积分："+jifen;
     }
 }
@@ -85,6 +89,7 @@ function jd() {
     judge();
     if (canshu <1){
         jifen--;
+        localStorage.setItem("mane",jifen);
         document.getElementById("di").innerText="you lost　积分："+jifen;
     }
     else  if (canshu<2 ){
@@ -92,6 +97,7 @@ function jd() {
 
     }else {
         jifen ++;
+        localStorage.setItem("mane",jifen);
         document.getElementById("di").innerText="you win　积分："+jifen;
     }
 }
@@ -101,10 +107,12 @@ function bu() {
     judge();
     if (canshu <1){
         jifen ++;
+        localStorage.setItem("mane",jifen);
         document.getElementById("di").innerText="you win　积分："+jifen;
     }
     else  if (canshu<2 ){
         jifen--;
+        localStorage.setItem("mane",jifen);
         document.getElementById("di").innerText="you lost　积分："+jifen;
     }else {
         document.getElementById("di").innerText="draw　积分："+jifen;
@@ -123,7 +131,7 @@ function bu() {
         </div>
     </div>
     <div id="you">
-        <h1 >电脑的出招  </h1>
+        <h1  >电脑的出招  </h1>
         <div id="computer">
         <img src="../媒体/底图.gif">
         </div>
