@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杨仕馀</title>
+    <style>
+        div.ni{
+            border: 3px solid white;
+            position: relative;
+            top: 160px;
+            left: 500px;
+            width: 399px;
+            height: 279px;
+            background-image: url("../媒体/皮卡.png");
+        }
+        body{
+            background-image:url(../媒体/背景4.gif) ;
+        }
+        div.wo{
+            width: 100px;
+            height: 100px;
+            background-color: #aaaaaa;
+            text-align: center;
+            position: relative;
+
+            animation-delay: 1s;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+            animation-play-state: running;
+            animation-name: myfirst2;
+        }
+        @keyframes myfirst {
+            from{
+                background-color: firebrick;
+
+            }
+            to{
+                background-color: teal;
+
+            }
+        }
+        @keyframes myfirst2{
+            0%{
+                top: 0px;
+                left: 0px;background-color: firebrick;
+
+            }
+            25%{
+                top: 0px;
+                left: 1450px;
+                background-color: darkcyan;
+            }
+            50%{
+                top: 650px;
+                left: 1450px;
+                background-color: lightseagreen;
+            }
+            75%{
+                top: 650px;
+                left: 0px;
+                background-color: plum;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+                background-color: sandybrown;
+            }
+        }
+    </style>
+</head>
+<body id="by">
+<audio id="mi"src="../媒体/把孤独当做晚餐.mp3" loop="loop" autoplay="autoplay" preload="auto"></audio>
+<div class="wo" id="wo">小动画的实现<br><br>!!!!!!</div>
+<div class="ni" id="ni" onclick="dian()">
+</div>
+<script>
+    function dian() {
+        if (document.getElementById("mi").paused){
+            document.getElementById("mi").play();
+            document.getElementById("wo").textContent="音乐走起来";
+            wo.style.fontSize=30+"px";
+            document.getElementById("ni").style.backgroundImage="url(../媒体/图片.gif)"
+            document.getElementById("by").style.backgroundImage="url(../媒体/背景2.gif)"
+
+        }
+        else
+        {
+            document.getElementById("mi").pause();
+            document.getElementById("ni").style.backgroundImage="url(../媒体/皮卡.png)"
+            document.getElementById("by").style.backgroundImage="url(../媒体/背景4.gif)"
+            document.getElementById("wo").textContent="音乐暂时停止";
+        }
+
+    }
+</script>
+</body>
+</html>
