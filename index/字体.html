@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>W3Cschool(w3cschool.cn)</title>
     <style>
+
         textarea{
             width: 600px;
             height: 400px;
@@ -18,8 +19,16 @@
 <textarea id="ni" type="text">
 
 </textarea><br />
+<audio id="mi"src="../媒体/1.mp3"  autoplay="autoplay" preload="auto" controls="controls"></audio>
+
+<script>
+    var r="../媒体/"+d+".mp3";
+    var d= Math.random()*10;
+d=Math.floor(d)+1;
+    document.getElementById("ni").textContent=d;
 
 
+</script>
 
 
 
