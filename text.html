@@ -2,42 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>杨仕馀</title>
-    <style>
-        body{
-            font-size: 200px;
-        }
-    </style>
+    <title>Title</title>
 </head>
 <body>
-<script>
-    var f=Math.random();
-    var binggo=false;
-    f=Math.floor(f*6)+1;
-    console.info(f);
-    function g() {
-        if (binggo){
-            return
-        }
-        var a=prompt("您猜猜多少？");
-        if (a==f){
-      document.write();
-            document.write("您猜对了！！！！");
+    <form action="loginServlet" method="post">
+           user:<input type="text" name="username"/>
+           password:<input type="password" name="password"/>
+          
+           <input type="submit" value="Submit"/>
+        </form>
+  </body>
 
-binggo=true
-        }
-        else if(a<f){
-            document.write("您猜小了！！");
-        }
-        else {
-            document.write("您猜大了！！！！");
-        }
-    }
-    g();
-    g();
-    g();
-</script>
-
-
-</body>
 </html>
